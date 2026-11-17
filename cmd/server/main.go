@@ -53,7 +53,7 @@ func main() {
 }
 
 func ok(w http.ResponseWriter, _ *http.Request) {
-	httpx.WriteJSON(w, http.StatusOK, map[string]string{"status": "ok"})
+	httpx.WriteJSON(w, http.StatusOK, map[string]string{"status": "ok", "service": "orders-svc"})
 }
 
 func envOr(key, def string) string {
